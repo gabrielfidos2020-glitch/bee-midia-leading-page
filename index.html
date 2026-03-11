@@ -359,15 +359,15 @@ nav {
 
 /* Cards */
 .cards { 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 28px;
+  display: flex; 
+  flex-direction: column; 
+  gap: 1.25rem; 
   margin-top: 2rem; 
 }
 .card { 
   background: rgba(255,255,255,0.7); 
   backdrop-filter: blur(6px);
-  padding: 28px 24px; 
+  padding: 24px; 
   border-radius: 16px; 
   box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
   border: 1px solid rgba(255,193,7,0.15); 
@@ -378,13 +378,9 @@ nav {
   flex-direction: column;
   justify-content: flex-start;
   overflow: hidden;
-  word-wrap: break-word;
-}
-.card h3 {
-  margin-bottom: 10px;
 }
 .card p {
-  line-height: 1.6;
+  line-height: 1.5;
   word-break: break-word;
 }
 .card:hover {
@@ -416,7 +412,7 @@ nav {
 .hex-grid { 
   display: flex; 
   flex-direction: column;
-  gap: 28px; 
+  gap: 2rem; 
   align-items: center;
   position: relative;
   z-index: 1;
@@ -445,11 +441,11 @@ nav {
   justify-content: center;
   text-align: center;
   aspect-ratio: 1 / 1.15;
-  padding: 28px 24px;
+  padding: 1.5rem 1rem;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 @media(min-width: 768px) {
-  .hex-inner { padding: 28px 24px; }
+  .hex-inner { padding: 2rem 1.5rem; }
 }
 .hex-icon {
   width: 48px;
@@ -804,17 +800,17 @@ nav {
   .hero { padding-top: 160px; padding-bottom: var(--space-xl); }
   /* Removed hero-label and hero h1/p from media query as they are replaced by hero-title/subtitle/desc */
   .stats { display: flex; flex-direction: row; justify-content: center; gap: 4rem; }
-  .cards { gap: 28px; justify-content: center; }
-  .card { padding: 28px 24px; }
+  .cards { flex-direction: row; gap: 2rem; justify-content: center; }
+  .card { padding: 3rem 2rem; }
   .hex-wrapper { margin-top: 4rem; }
-  .hex-grid { flex-direction: row; justify-content: center; gap: 28px; max-width: 1200px; margin: 0 auto; }
+  .hex-grid { flex-direction: row; justify-content: center; gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
   .hex-wrap { flex: 1; max-width: 280px; }
   
   .process-grid { flex-direction: row; gap: 2rem; justify-content: center; }
   .process-step { flex: 1; padding: 2.5rem; }
   
-  .services .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; justify-content: center; max-width: 1000px; margin: 0 auto; }
-  .services .card { width: 100%; padding: 28px 24px; }
+  .services .cards { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; max-width: 1000px; margin: 0 auto; }
+  .services .card { width: calc(50% - 1rem); padding: 2.5rem; }
   
   .quiz { padding: 3rem; }
   .authority { padding: 4rem 0 2rem; }
